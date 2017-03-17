@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.40xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o D:\project\pd\soft\configure//config -s 8192 -u 0000 D:/project/pd/soft/configure/configure.bit -spi 
+
+PROM D:\project\pd\soft\configure\config.prm map: Fri Dec 21 17:40:42 2012
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          8192K
+PROM start    0000:0000
+PROM end      007f:ffff
+PROM checksum 5a79aa19
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0025:6e63     Dec 17 16:51:08 2012 D:/project/pd/soft/configure/configure.bit

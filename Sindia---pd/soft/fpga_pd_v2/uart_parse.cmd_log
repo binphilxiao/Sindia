@@ -1,0 +1,2 @@
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/uart_parse.vhi -module uart_parse -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/uart_parse.vhd 
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/uart_parse.vhi -module uart_parse -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/uart_parse.vhd 

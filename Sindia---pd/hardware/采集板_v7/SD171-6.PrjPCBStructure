@@ -1,0 +1,8 @@
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=TopLevelDocument|FileName=Sheet1.SchDoc
+Record=FPGA_COMPONENT|BaseComponentDesignator=D20|DocumentName=Sheet3.SchDoc|LibraryReference=XC2C32A-6QFG32C|SubProjectPath= |Configuration= |Description=CoolRunner-II 1.8V, 32 Macrocell CPLD, 21 User I/Os, 32-Pin QFNL, Commercial Grade, Pb-Free|NexusDeviceId=XC2C32A-6QFG32C|SubPartUniqueId1=RUTNVGYH|SubPartDocPath1=Sheet3.SchDoc|SubPartUniqueId2=EQDVLHJM|SubPartDocPath2=Sheet3.SchDoc|SubPartUniqueId3=BFMBUCNU|SubPartDocPath3=Sheet3.SchDoc|SubPartUniqueId4=JPQYMMEL|SubPartDocPath4=Sheet3.SchDoc|SubPartUniqueId5=MQWACDIG|SubPartDocPath5=Sheet3.SchDoc|SubPartUniqueId6=XULMYHIO|SubPartDocPath6=Sheet3.SchDoc
+Record=FPGA_COMPONENT|BaseComponentDesignator=U22|DocumentName=Sheet1.SchDoc|LibraryReference=XC6SLX45-L1FGG484I|SubProjectPath= |Configuration= |Description=Spartan-6 LX 1.0V FPGA, 316 User I/Os, 484-Ball Fine-Pitch BGA (1.0mm Pitch), Low Power Version, Industrial Grade, Pb-Free|NexusDeviceId=XC6SLX45-L1FGG484I|SubPartUniqueId1=LGBSKJVE|SubPartDocPath1=Sheet1.SchDoc|SubPartUniqueId2=OOHCEVDS|SubPartDocPath2=Sheet2.SchDoc|SubPartUniqueId3=VXNTLILE|SubPartDocPath3=Sheet3.SchDoc|SubPartUniqueId4=UIFKKNOK|SubPartDocPath4=Sheet4.SchDoc|SubPartUniqueId5=HEXVCVDF|SubPartDocPath5=Sheet3.SchDoc|SubPartUniqueId6=OKSSBGLJ|SubPartDocPath6=Sheet5.SchDoc|SubPartUniqueId7=EDSFQRJA|SubPartDocPath7=Sheet5.SchDoc|SubPartUniqueId8=RTOYGDDB|SubPartDocPath8=Sheet5.SchDoc

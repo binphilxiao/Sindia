@@ -1,0 +1,97 @@
+Release 14.3 Drc P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Tue Jan 15 13:49:55 2013
+
+drc -z configure.ncd configure.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   s_chipscope_icon_control0<13> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[60].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[59].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[51].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[53].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[45].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[127].UPDATE_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[63].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[57].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[40].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[56].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[55].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[52].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[46].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[48].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[47].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[49].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[39].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[38].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[62].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[61].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[58].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[54].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[41].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[44].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[42].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[43].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[50].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <chipscope_vio_inst/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 29 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

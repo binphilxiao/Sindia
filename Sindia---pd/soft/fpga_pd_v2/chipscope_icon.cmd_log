@@ -1,0 +1,1 @@
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/chipscope_icon.vhi -module chipscope_icon -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/core_configure/chipscope_icon.vhd 

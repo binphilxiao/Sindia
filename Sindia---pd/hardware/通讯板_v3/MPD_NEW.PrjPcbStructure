@@ -1,0 +1,5 @@
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=SubProject|ProjectPath=1
+Record=TopLevelDocument|FileName=Sheet1.SchDoc
+Record=FPGA_COMPONENT|BaseComponentDesignator=U1|DocumentName=Sheet1.SchDoc|LibraryReference=XC6SLX45-3FGG484I|SubProjectPath= |Configuration= |Description=Spartan-6 LX 1.2V FPGA, 316 User I/Os, 484-Ball Fine-Pitch BGA (1.0mm Pitch), Speed Grade 3, Industrial Grade, Pb-Free|NexusDeviceId=XC6SLX45-3FGG484I|SubPartUniqueId1=QFVYCAKE|SubPartDocPath1=Sheet1.SchDoc|SubPartUniqueId2=TYSDJRTM|SubPartDocPath2=Sheet2.SchDoc|SubPartUniqueId3=WXRVTXJW|SubPartDocPath3=Sheet3.SchDoc|SubPartUniqueId4=DJQTSRQG|SubPartDocPath4=Sheet4.SchDoc|SubPartUniqueId5=EYMVGENX|SubPartDocPath5=Sheet3.SchDoc|SubPartUniqueId6=HYLQJPJD|SubPartDocPath6=Sheet5.SchDoc|SubPartUniqueId7=LDCVJDBJ|SubPartDocPath7=Sheet5.SchDoc|SubPartUniqueId8=IXNADCWF|SubPartDocPath8=Sheet5.SchDoc

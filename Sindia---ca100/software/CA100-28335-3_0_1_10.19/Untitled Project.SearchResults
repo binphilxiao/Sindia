@@ -1,0 +1,5 @@
+---- sht71_ht Matches (4 in 4 files) ----
+Ca100.c (dsp2833x_examples\dp30):		sht71_ht(&humidity,&temprature.val);
+DSP2833x_GlobalPrototypes.h (dsp2833x_common\include):extern Uint16 sht71_ht(float *p_humidity ,float *p_temperature);
+Sensor.c (dsp2833x_examples\dp30):	ret=sht71_ht(humidity_pt,&temp_pt->val);
+Sht11.c (dsp2833x_examples\dp30):Uint16 sht71_ht(float *p_humidity ,float *p_temperature)

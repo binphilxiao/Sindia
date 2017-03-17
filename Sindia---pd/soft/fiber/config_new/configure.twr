@@ -1,0 +1,2219 @@
+--------------------------------------------------------------------------------
+Release 14.3 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+d:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml configure.twx configure.ncd -o configure.twr configure.pcf
+
+Design file:              configure.ncd
+Physical constraint file: configure.pcf
+Device,package,speed:     xc6slx75,fgg484,C,-2 (PRODUCTION 1.23 2012-10-12)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 8902 paths analyzed, 2654 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  17.625ns.
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[77].u_ramb18/U_RAMB18 (RAMB16_X2Y16.ADDRA0), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     12.375ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[77].u_ramb18/U_RAMB18 (RAM)
+  Requirement:          30.000ns
+  Data Path Delay:      17.590ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[77].u_ramb18/U_RAMB18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y107.AQ     Tcko                  0.476   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_row_addr<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE
+    RAMB16_X2Y16.ADDRA0  net (fanout=130)     16.714   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_row_addr<0>
+    RAMB16_X2Y16.CLKA    Trcck_ADDRA           0.400   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[77].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[77].u_ramb18/U_RAMB18
+    -------------------------------------------------  ---------------------------
+    Total                                     17.590ns (0.876ns logic, 16.714ns route)
+                                                       (5.0% logic, 95.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[29].u_ramb18/U_RAMB18 (RAMB16_X2Y18.ADDRA0), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     13.347ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[29].u_ramb18/U_RAMB18 (RAM)
+  Requirement:          30.000ns
+  Data Path Delay:      16.618ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[29].u_ramb18/U_RAMB18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y107.AQ     Tcko                  0.476   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_row_addr<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_ROW_ADDR/G[0].U_FDRE
+    RAMB16_X2Y18.ADDRA0  net (fanout=130)     15.742   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_row_addr<0>
+    RAMB16_X2Y18.CLKA    Trcck_ADDRA           0.400   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[29].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[29].u_ramb18/U_RAMB18
+    -------------------------------------------------  ---------------------------
+    Total                                     16.618ns (0.876ns logic, 15.742ns route)
+                                                       (5.3% logic, 94.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_TDO_reg (SLICE_X50Y120.A5), 396 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.502ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[0].u_ramb18/U_RAMB18 (RAM)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      16.463ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[0].u_ramb18/U_RAMB18 to chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X3Y82.DOA0    Trcko_DOA             2.100   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[0].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[0].u_ramb18/U_RAMB18
+    SLICE_X44Y78.C4      net (fanout=1)        7.033   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<0>
+    SLICE_X44Y78.C       Tilo                  0.235   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1941
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1942
+    SLICE_X44Y78.A1      net (fanout=1)        0.532   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1941
+    SLICE_X44Y78.A       Tilo                  0.235   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1941
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1944
+    SLICE_X43Y107.C3     net (fanout=1)        2.306   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1943
+    SLICE_X43Y107.C      Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1949
+    SLICE_X36Y109.D6     net (fanout=1)        0.613   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1948
+    SLICE_X36Y109.CMUX   Topdc                 0.402   s_chipscope_vio_syncout<31>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966_F
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966
+    SLICE_X50Y120.B3     net (fanout=1)        1.968   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X50Y120.B      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X50Y120.A5     net (fanout=1)        0.196   chipscope_icon_inst/N2
+    SLICE_X50Y120.CLK    Tas                   0.349   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                     16.463ns (3.815ns logic, 12.648ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.444ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[2].U_FDRE (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      15.521ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[2].U_FDRE to chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y107.CQ     Tcko                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[2].U_FDRE
+    SLICE_X21Y58.C1      net (fanout=34)       5.134   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<2>
+    SLICE_X21Y58.C       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+    SLICE_X21Y58.B4      net (fanout=1)        0.352   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1953
+    SLICE_X21Y58.B       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1956
+    SLICE_X45Y66.A5      net (fanout=1)        2.227   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1955
+    SLICE_X45Y66.A       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1949
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1957
+    SLICE_X36Y109.D3     net (fanout=1)        3.451   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1956
+    SLICE_X36Y109.CMUX   Topdc                 0.402   s_chipscope_vio_syncout<31>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966_F
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966
+    SLICE_X50Y120.B3     net (fanout=1)        1.968   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X50Y120.B      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X50Y120.A5     net (fanout=1)        0.196   chipscope_icon_inst/N2
+    SLICE_X50Y120.CLK    Tas                   0.349   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                     15.521ns (2.193ns logic, 13.328ns route)
+                                                       (14.1% logic, 85.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      15.462ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE to chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y107.AQ     Tcko                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_SINGLE_ROW.U_RD_COL_ADDR_DLY/G_REG_BIT[0].U_FDRE
+    SLICE_X21Y58.D4      net (fanout=27)       4.884   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_dly<0>
+    SLICE_X21Y58.D       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1955
+    SLICE_X21Y58.B2      net (fanout=1)        0.543   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+    SLICE_X21Y58.B       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1954
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1956
+    SLICE_X45Y66.A5      net (fanout=1)        2.227   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1955
+    SLICE_X45Y66.A       Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1949
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1957
+    SLICE_X36Y109.D3     net (fanout=1)        3.451   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1956
+    SLICE_X36Y109.CMUX   Topdc                 0.402   s_chipscope_vio_syncout<31>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966_F
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O1966
+    SLICE_X50Y120.B3     net (fanout=1)        1.968   chipscope_ila_inst/U0/I_NO_D.U_ILA/iDATA_DOUT
+    SLICE_X50Y120.B      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1_SW0
+    SLICE_X50Y120.A5     net (fanout=1)        0.196   chipscope_icon_inst/N2
+    SLICE_X50Y120.CLK    Tas                   0.349   chipscope_icon_inst/U0/U_ICON/iTDO
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O1
+                                                       chipscope_icon_inst/U0/U_ICON/U_TDO_reg
+    -------------------------------------------------  ---------------------------
+    Total                                     15.462ns (2.193ns logic, 13.269ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[84].UPDATE_CELL/SHIFT_REG (SLICE_X44Y75.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.392ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[83].UPDATE_CELL/SHIFT_REG (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[84].UPDATE_CELL/SHIFT_REG (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.392ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 30.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[83].UPDATE_CELL/SHIFT_REG to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[84].UPDATE_CELL/SHIFT_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y75.CQ      Tcko                  0.200   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<85>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[83].UPDATE_CELL/SHIFT_REG
+    SLICE_X44Y75.DX      net (fanout=2)        0.144   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<84>
+    SLICE_X44Y75.CLK     Tckdi       (-Th)    -0.048   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<85>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[84].UPDATE_CELL/SHIFT_REG
+    -------------------------------------------------  ---------------------------
+    Total                                      0.392ns (0.248ns logic, 0.144ns route)
+                                                       (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL (SLICE_X43Y106.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.406ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[2].U_SEL (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.406ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 30.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[2].U_SEL to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y106.CQ     Tcko                  0.198   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[2].U_SEL
+    SLICE_X43Y106.DX     net (fanout=2)        0.149   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<3>
+    SLICE_X43Y106.CLK    Tckdi       (-Th)    -0.059   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/cfg_data_vec<4>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_0_TO_64K.F_SEL[3].U_SEL
+    -------------------------------------------------  ---------------------------
+    Total                                      0.406ns (0.257ns logic, 0.149ns route)
+                                                       (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[68].UPDATE_CELL/SHIFT_REG (SLICE_X36Y84.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[68].UPDATE_CELL/SHIFT_REG (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.409ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising at 30.000ns
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[68].UPDATE_CELL/SHIFT_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y84.CQ      Tcko                  0.200   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<69>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG
+    SLICE_X36Y84.DX      net (fanout=2)        0.161   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<68>
+    SLICE_X36Y84.CLK     Tckdi       (-Th)    -0.048   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<69>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[68].UPDATE_CELL/SHIFT_REG
+    -------------------------------------------------  ---------------------------
+    Total                                      0.409ns (0.248ns logic, 0.161ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 26.430ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKA
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKA
+  Location pin: RAMB16_X0Y48.CLKA
+  Clock network: s_chipscope_icon_control0<0>
+--------------------------------------------------------------------------------
+Slack: 26.430ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKA
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKA
+  Location pin: RAMB16_X2Y50.CLKA
+  Clock network: s_chipscope_icon_control0<0>
+--------------------------------------------------------------------------------
+Slack: 26.430ns (period - min period limit)
+  Period: 30.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKA
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKA
+  Location pin: RAMB16_X2Y54.CLKA
+  Clock network: s_chipscope_icon_control0<0>
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 18 paths analyzed, 18 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.081ns.
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET (SLICE_X49Y116.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    9.919ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      5.046ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.476   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.C3     net (fanout=3)        0.405   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.C      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X49Y116.CE     net (fanout=3)        3.522   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X49Y116.CLK    Tceck                 0.408   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      5.046ns (1.119ns logic, 3.927ns route)
+                                                       (22.2% logic, 77.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (SLICE_X49Y116.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    9.937ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      5.028ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.476   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.C3     net (fanout=3)        0.405   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.C      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X49Y116.CE     net (fanout=3)        3.522   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X49Y116.CLK    Tceck                 0.390   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[9].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      5.028ns (1.101ns logic, 3.927ns route)
+                                                       (21.9% logic, 78.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[11].I_NE0.U_TARGET (SLICE_X49Y116.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    9.945ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[11].I_NE0.U_TARGET (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      5.020ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[11].I_NE0.U_TARGET
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.476   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.C3     net (fanout=3)        0.405   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.C      Tilo                  0.235   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/U_TARGET_CE
+    SLICE_X49Y116.CE     net (fanout=3)        3.522   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET_CE
+    SLICE_X49Y116.CLK    Tceck                 0.382   chipscope_icon_inst/U0/U_ICON/U_CMD/iTARGET<11>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[11].I_NE0.U_TARGET
+    -------------------------------------------------  ---------------------------
+    Total                                      5.020ns (1.093ns logic, 3.927ns route)
+                                                       (21.8% logic, 78.2% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[0].I_NE0.U_FDR (SLICE_X51Y129.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.802ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[0].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.837ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[0].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.200   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.B2     net (fanout=3)        0.250   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.B      Tilo                  0.142   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X51Y129.SR     net (fanout=3)        1.376   chipscope_icon_inst/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X51Y129.CLK    Tcksr       (-Th)     0.131   chipscope_icon_inst/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[0].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.837ns (0.211ns logic, 1.626ns route)
+                                                       (11.5% logic, 88.5% route)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[1].I_NE0.U_FDR (SLICE_X51Y129.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.805ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[1].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.840ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[1].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.200   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.B2     net (fanout=3)        0.250   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.B      Tilo                  0.142   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X51Y129.SR     net (fanout=3)        1.376   chipscope_icon_inst/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X51Y129.CLK    Tcksr       (-Th)     0.128   chipscope_icon_inst/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[1].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.840ns (0.214ns logic, 1.626ns route)
+                                                       (11.6% logic, 88.4% route)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR (SLICE_X51Y129.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.841ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.200   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.B2     net (fanout=3)        0.250   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.B      Tilo                  0.142   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_iDATA_CMD_n
+    SLICE_X51Y129.SR     net (fanout=3)        1.376   chipscope_icon_inst/U0/U_ICON/U_SYNC/iDATA_CMD_n
+    SLICE_X51Y129.CLK    Tcksr       (-Th)     0.127   chipscope_icon_inst/U0/U_ICON/U_SYNC/iSYNC_WORD<3>
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/G_SYNC_WORD[3].I_NE0.U_FDR
+    -------------------------------------------------  ---------------------------
+    Total                                      1.841ns (0.215ns logic, 1.626ns route)
+                                                       (11.7% logic, 88.3% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 
+15 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.020ns.
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (SLICE_X58Y157.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup paths):    13.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          15.000ns
+  Data Path Delay:      0.985ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.476   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.A6     net (fanout=3)        0.160   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.CLK    Tas                   0.349   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD_n
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      0.985ns (0.825ns logic, 0.160ns route)
+                                                       (83.8% logic, 16.2% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 15 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (SLICE_X58Y157.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.421ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock:    chipscope_icon_inst/U0/iUPDATE_OUT rising
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD to chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y157.AQ     Tcko                  0.200   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    SLICE_X58Y157.A6     net (fanout=3)        0.031   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+    SLICE_X58Y157.CLK    Tah         (-Th)    -0.190   chipscope_icon_inst/U0/U_ICON/iDATA_CMD
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD_n
+                                                       chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD
+    -------------------------------------------------  ---------------------------
+    Total                                      0.421ns (0.390ns logic, 0.031ns route)
+                                                       (92.6% logic, 7.4% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J_TO_D_path" TIG;
+
+ 3615 paths analyzed, 459 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG (SLICE_X27Y75.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     11.134ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      11.099ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y130.AQ     Tcko                  0.525   chipscope_icon_inst/U0/U_ICON/iSYNC
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X53Y130.D3     net (fanout=1)        0.395   chipscope_icon_inst/U0/U_ICON/iSYNC
+    SLICE_X53Y130.D      Tilo                  0.259   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X43Y104.C1     net (fanout=13)       4.306   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     11.099ns (1.511ns logic, 9.588ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.413ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.378ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.AQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET
+    SLICE_X45Y120.C1     net (fanout=3)        1.118   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<0>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.378ns (1.416ns logic, 8.962ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.241ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.206ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.BQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    SLICE_X45Y120.C3     net (fanout=4)        0.946   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.206ns (1.416ns logic, 8.790ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG (SLICE_X27Y75.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     11.104ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      11.069ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y130.AQ     Tcko                  0.525   chipscope_icon_inst/U0/U_ICON/iSYNC
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X53Y130.D3     net (fanout=1)        0.395   chipscope_icon_inst/U0/U_ICON/iSYNC
+    SLICE_X53Y130.D      Tilo                  0.259   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X43Y104.C1     net (fanout=13)       4.306   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.438   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     11.069ns (1.481ns logic, 9.588ns route)
+                                                       (13.4% logic, 86.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.383ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.348ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.AQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET
+    SLICE_X45Y120.C1     net (fanout=3)        1.118   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<0>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.438   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.348ns (1.386ns logic, 8.962ns route)
+                                                       (13.4% logic, 86.6% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.211ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.176ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.BQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    SLICE_X45Y120.C3     net (fanout=4)        0.946   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X27Y75.SR      net (fanout=116)      4.887   s_chipscope_icon_control1<5>
+    SLICE_X27Y75.CLK     Tsrck                 0.438   chipscope_vio_inst/U0/I_VIO/UPDATE<27>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.176ns (1.386ns logic, 8.790ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG (SLICE_X45Y75.SR), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     11.100ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      11.065ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y130.AQ     Tcko                  0.525   chipscope_icon_inst/U0/U_ICON/iSYNC
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X53Y130.D3     net (fanout=1)        0.395   chipscope_icon_inst/U0/U_ICON/iSYNC
+    SLICE_X53Y130.D      Tilo                  0.259   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X43Y104.C1     net (fanout=13)       4.306   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X45Y75.SR      net (fanout=116)      4.853   s_chipscope_icon_control1<5>
+    SLICE_X45Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<23>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     11.065ns (1.511ns logic, 9.554ns route)
+                                                       (13.7% logic, 86.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.379ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.344ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.AQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET
+    SLICE_X45Y120.C1     net (fanout=3)        1.118   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<0>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X45Y75.SR      net (fanout=116)      4.853   s_chipscope_icon_control1<5>
+    SLICE_X45Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<23>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.344ns (1.416ns logic, 8.928ns route)
+                                                       (13.7% logic, 86.3% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     10.207ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      10.172ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.BQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    SLICE_X45Y120.C3     net (fanout=4)        0.946   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X43Y104.C5     net (fanout=12)       2.957   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X43Y104.C      Tilo                  0.259   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_LCE
+    SLICE_X45Y75.SR      net (fanout=116)      4.853   s_chipscope_icon_control1<5>
+    SLICE_X45Y75.CLK     Tsrck                 0.468   chipscope_vio_inst/U0/I_VIO/UPDATE<23>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                     10.172ns (1.416ns logic, 8.756ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_J_TO_D_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/GEN_CLK.USER_REG (SLICE_X37Y84.DX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.390ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      0.425ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y84.CQ      Tcko                  0.200   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<69>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/SHIFT_REG
+    SLICE_X37Y84.DX      net (fanout=2)        0.166   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<68>
+    SLICE_X37Y84.CLK     Tckdi       (-Th)    -0.059   chipscope_vio_inst/U0/I_VIO/UPDATE<3>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                      0.425ns (0.259ns logic, 0.166ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0 (SLICE_X51Y115.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.415ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_TFDRE (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0 (FF)
+  Data Path Delay:      0.450ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_TFDRE to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y115.CQ     Tcko                  0.200   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/din_latched
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_TFDRE
+    SLICE_X51Y115.AX     net (fanout=1)        0.191   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/din_latched
+    SLICE_X51Y115.CLK    Tckdi       (-Th)    -0.059   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iDIN<1>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.450ns (0.259ns logic, 0.191ns route)
+                                                       (57.6% logic, 42.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/GEN_CLK.USER_REG (SLICE_X35Y112.DX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.424ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/SHIFT_REG (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/GEN_CLK.USER_REG (FF)
+  Data Path Delay:      0.459ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<0> rising
+  Destination Clock:    s_clk_50m rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/SHIFT_REG to chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/GEN_CLK.USER_REG
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y112.CQ     Tcko                  0.234   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<101>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/SHIFT_REG
+    SLICE_X35Y112.DX     net (fanout=2)        0.166   chipscope_vio_inst/U0/I_VIO/OUTPUT_SHIFT<100>
+    SLICE_X35Y112.CLK    Tckdi       (-Th)    -0.059   chipscope_vio_inst/U0/I_VIO/UPDATE<35>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL/GEN_CLK.USER_REG
+    -------------------------------------------------  ---------------------------
+    Total                                      0.459ns (0.293ns logic, 0.166ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_D_TO_J_path" TIG;
+
+ 713 paths analyzed, 655 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y113.A5), 59 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.206ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      5.171ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_clk_50m rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y108.DQ     Tcko                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ
+    SLICE_X52Y108.D6     net (fanout=1)        1.038   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<3>
+    SLICE_X52Y108.CMUX   Topdc                 0.456   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_HCMP_Q
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_4
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X53Y112.A4     net (fanout=4)        1.143   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X53Y112.A      Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/ARM_dstat
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123_SW0
+    SLICE_X52Y113.B1     net (fanout=1)        1.005   chipscope_ila_inst/N38
+    SLICE_X52Y113.B      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O124
+    SLICE_X52Y113.A5     net (fanout=1)        0.247   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123
+    SLICE_X52Y113.CLK    Tas                   0.339   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O125
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      5.171ns (1.738ns logic, 3.433ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.890ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      4.855ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_clk_50m rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y108.DQ     Tcko                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ
+    SLICE_X52Y108.C1     net (fanout=1)        0.748   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+    SLICE_X52Y108.CMUX   Tilo                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_HCMP_Q
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_3
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X53Y112.A4     net (fanout=4)        1.143   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X53Y112.A      Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/ARM_dstat
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123_SW0
+    SLICE_X52Y113.B1     net (fanout=1)        1.005   chipscope_ila_inst/N38
+    SLICE_X52Y113.B      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O124
+    SLICE_X52Y113.A5     net (fanout=1)        0.247   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123
+    SLICE_X52Y113.CLK    Tas                   0.339   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O125
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.855ns (1.712ns logic, 3.143ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.860ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      4.825ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_clk_50m rising
+  Destination Clock:    s_chipscope_icon_control0<0> rising
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y108.AQ     Tcko                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<7>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ
+    SLICE_X52Y108.C6     net (fanout=1)        0.718   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/NS_dstat<4>
+    SLICE_X52Y108.CMUX   Tilo                  0.430   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/WCNT_HCMP_Q
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_3
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DMUX4/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f7
+    SLICE_X53Y112.A4     net (fanout=4)        1.143   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DSTAT<4>
+    SLICE_X53Y112.A      Tilo                  0.259   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/ARM_dstat
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123_SW0
+    SLICE_X52Y113.B1     net (fanout=1)        1.005   chipscope_ila_inst/N38
+    SLICE_X52Y113.B      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O124
+    SLICE_X52Y113.A5     net (fanout=1)        0.247   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123
+    SLICE_X52Y113.CLK    Tas                   0.339   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O125
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      4.825ns (1.712ns logic, 3.113ns route)
+                                                       (35.5% logic, 64.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[26].SYNC_OUT_CELL/I_SRL_T2.U_SRL (SLICE_X22Y61.A3), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     5.063ns (data path)
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[1].U_FDRE (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[26].SYNC_OUT_CELL/I_SRL_T2.U_SRL (FF)
+  Data Path Delay:      5.063ns (Levels of Logic = 0)
+  Source Clock:         s_clk_50m rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[1].U_FDRE to chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[26].SYNC_OUT_CELL/I_SRL_T2.U_SRL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y91.BQ      Tcko                  0.476   chipscope_vio_inst/U0/I_VIO/addr<3>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[1].U_FDRE
+    SLICE_X22Y61.A3      net (fanout=66)       4.587   chipscope_vio_inst/U0/I_VIO/addr<1>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.063ns (0.476ns logic, 4.587ns route)
+                                                       (9.4% logic, 90.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/I_SRL_T2.U_SRL (SLICE_X26Y60.A2), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     4.893ns (data path)
+  Source:               chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[0].U_FDRE (FF)
+  Destination:          chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/I_SRL_T2.U_SRL (FF)
+  Data Path Delay:      4.893ns (Levels of Logic = 0)
+  Source Clock:         s_clk_50m rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[0].U_FDRE to chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/I_SRL_T2.U_SRL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y91.AQ      Tcko                  0.476   chipscope_vio_inst/U0/I_VIO/addr<3>
+                                                       chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT_ADDR.SYNC_OUT_ADDR/COUNT/G[0].U_FDRE
+    SLICE_X26Y60.A2      net (fanout=66)       4.417   chipscope_vio_inst/U0/I_VIO/addr<0>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.893ns (0.476ns logic, 4.417ns route)
+                                                       (9.7% logic, 90.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_D2_TO_T2_path" TIG;
+
+ 3 paths analyzed, 3 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y113.A5), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     3.702ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      3.667ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.515   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y115.D4     net (fanout=2)        1.094   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y115.CMUX   Topdc                 0.456   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O122_F
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O122
+    SLICE_X52Y113.B2     net (fanout=1)        0.762   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O121
+    SLICE_X52Y113.B      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O124
+    SLICE_X52Y113.A5     net (fanout=1)        0.247   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123
+    SLICE_X52Y113.CLK    Tas                   0.339   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O125
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      3.667ns (1.564ns logic, 2.103ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X52Y115.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     2.334ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      2.299ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.515   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y116.A3     net (fanout=2)        0.959   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y116.A      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X52Y115.AX     net (fanout=1)        0.486   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X52Y115.CLK    Tdick                 0.085   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      2.299ns (0.854ns logic, 1.445ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X52Y116.A3), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     1.848ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      1.813ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.515   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y116.A3     net (fanout=2)        0.959   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y116.CLK    Tas                   0.339   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.813ns (0.854ns logic, 0.959ns route)
+                                                       (47.1% logic, 52.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_D2_TO_T2_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (SLICE_X52Y116.A3), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      0.866ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE (FF)
+  Data Path Delay:      0.901ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.235   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y116.A3     net (fanout=2)        0.469   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y116.CLK    Tah         (-Th)    -0.197   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDCE
+    -------------------------------------------------  ---------------------------
+    Total                                      0.901ns (0.432ns logic, 0.469ns route)
+                                                       (47.9% logic, 52.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (SLICE_X52Y115.AX), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.078ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE (FF)
+  Data Path Delay:      1.113ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.235   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y116.A3     net (fanout=2)        0.469   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y116.A      Tilo                  0.156   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D0
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/Mmux_DIRTY_dstat11
+    SLICE_X52Y115.AX     net (fanout=1)        0.212   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_dstat
+    SLICE_X52Y115.CLK    Tckdi       (-Th)    -0.041   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_FDPE
+    -------------------------------------------------  ---------------------------
+    Total                                      1.113ns (0.432ns logic, 0.681ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (SLICE_X52Y113.A5), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      1.727ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      1.762ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_chipscope_icon_control0<13> falling
+  Destination Clock:    s_chipscope_icon_control0<0> rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y116.AQ     Tcklo                 0.235   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    SLICE_X52Y115.D4     net (fanout=2)        0.523   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+    SLICE_X52Y115.CMUX   Topdc                 0.245   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_D1
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O122_F
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O122
+    SLICE_X52Y113.B2     net (fanout=1)        0.343   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O121
+    SLICE_X52Y113.B      Tilo                  0.156   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O124
+    SLICE_X52Y113.A5     net (fanout=1)        0.063   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O123
+    SLICE_X52Y113.CLK    Tah         (-Th)    -0.197   chipscope_ila_inst/U0/I_NO_D.U_ILA/iSTAT_DOUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O125
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    -------------------------------------------------  ---------------------------
+    Total                                      1.762ns (0.833ns logic, 0.929ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J2_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J3_TO_D2_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_J4_TO_D2_path" TIG;
+
+ 12 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X53Y116.CLK), 11 paths
+--------------------------------------------------------------------------------
+Delay (setup path):     5.533ns (data path)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      5.533ns (Levels of Logic = 2)
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.AQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[6].I_NE0.U_TARGET
+    SLICE_X45Y120.C1     net (fanout=3)        1.118   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<0>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X56Y116.A2     net (fanout=12)       2.799   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X56Y116.A      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X53Y116.CLK    net (fanout=4)        0.673   s_chipscope_icon_control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.533ns (0.943ns logic, 4.590ns route)
+                                                       (17.0% logic, 83.0% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     5.361ns (data path)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      5.361ns (Levels of Logic = 2)
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y119.BQ     Tcko                  0.430   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CMD/G_TARGET[7].I_NE0.U_TARGET
+    SLICE_X45Y120.C3     net (fanout=4)        0.946   chipscope_icon_inst/U0/U_ICON/iCOMMAND_GRP<1>
+    SLICE_X45Y120.C      Tilo                  0.259   s_chipscope_icon_control0<6>
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_CMDGRP0
+    SLICE_X56Y116.A2     net (fanout=12)       2.799   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iCOMMAND_GRP_SEL<0>
+    SLICE_X56Y116.A      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X53Y116.CLK    net (fanout=4)        0.673   s_chipscope_icon_control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.361ns (0.943ns logic, 4.418ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+Delay (setup path):     4.418ns (data path)
+  Source:               chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      4.418ns (Levels of Logic = 2)
+  Source Clock:         s_chipscope_icon_control0<0> rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y130.AQ     Tcko                  0.525   chipscope_icon_inst/U0/U_ICON/iSYNC
+                                                       chipscope_icon_inst/U0/U_ICON/U_SYNC/U_SYNC
+    SLICE_X53Y130.D3     net (fanout=1)        0.395   chipscope_icon_inst/U0/U_ICON/iSYNC
+    SLICE_X53Y130.D      Tilo                  0.259   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/U_DATA_VALID
+    SLICE_X56Y116.A3     net (fanout=13)       2.312   chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/iDATA_VALID
+    SLICE_X56Y116.A      Tilo                  0.254   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/din_latched
+                                                       chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE
+    SLICE_X53Y116.CLK    net (fanout=4)        0.673   s_chipscope_icon_control0<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.418ns (1.038ns logic, 3.380ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X53Y116.SR), 1 path
+--------------------------------------------------------------------------------
+Delay (setup path):     -0.959ns (data path - clock path skew + uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      0.924ns (Levels of Logic = 0)
+  Clock Path Skew:      2.171ns (1.706 - -0.465)
+  Source Clock:         s_clk_50m rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<13> falling
+  Clock Uncertainty:    0.288ns
+
+  Clock Uncertainty:          0.288ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.210ns
+    Phase Error (PE):           0.177ns
+
+  Maximum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y112.AQ     Tcko                  0.248   chipscope_ila_inst/U0/I_NO_D.U_ILA/iARM
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD
+    SLICE_X53Y116.SR     net (fanout=11)       0.499   chipscope_ila_inst/U0/I_NO_D.U_ILA/iARM
+    SLICE_X53Y116.CLK    Trck                  0.177   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      0.924ns (0.425ns logic, 0.499ns route)
+                                                       (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PATH "TS_J4_TO_D2_path" TIG;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (SLICE_X53Y116.SR), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      -4.941ns (datapath - clock path skew - uncertainty)
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Data Path Delay:      1.635ns (Levels of Logic = 0)
+  Clock Path Skew:      6.288ns (5.533 - -0.755)
+  Source Clock:         s_clk_50m rising at 0.000ns
+  Destination Clock:    s_chipscope_icon_control0<13> falling
+  Clock Uncertainty:    0.288ns
+
+  Clock Uncertainty:          0.288ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.210ns
+    Phase Error (PE):           0.177ns
+
+  Minimum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y112.AQ     Tcko                  0.495   chipscope_ila_inst/U0/I_NO_D.U_ILA/iARM
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD
+    SLICE_X53Y116.SR     net (fanout=11)       0.899   chipscope_ila_inst/U0/I_NO_D.U_ILA/iARM
+    SLICE_X53Y116.CLK    Tremck      (-Th)    -0.241   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DIRTY_SEL
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      1.635ns (0.736ns logic, 0.899ns route)
+                                                       (45.0% logic, 55.0% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_pic_clk_100m_p = PERIOD TIMEGRP "pic_clk_100m_p" 10 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_pic_clk_100m_p = PERIOD TIMEGRP "pic_clk_100m_p" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 7.780ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.220ns (450.450MHz) (Tpllper_CLKIN(Finmax))
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_pic_clk_100m_n = PERIOD TIMEGRP "pic_clk_100m_n" 10 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_pic_clk_100m_n = PERIOD TIMEGRP "pic_clk_100m_n" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 7.780ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.220ns (450.450MHz) (Tpllper_CLKIN(Finmax))
+  Physical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_mpll_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: clock_mpll_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_pic_adc_clk = PERIOD TIMEGRP "pic_adc_clk" 10 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_pic_adc_clk = PERIOD TIMEGRP "pic_adc_clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN1
+  Clock network: clock_adc_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN1
+  Clock network: clock_adc_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 7.780ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.220ns (450.450MHz) (Tpllper_CLKIN(Finmax))
+  Physical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: clock_adc_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN1
+  Clock network: clock_adc_inst/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_mpll_inst_clkout1 = PERIOD TIMEGRP 
+"clock_mpll_inst_clkout1"         TS_pic_clk_100m_p / 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.570ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock_mpll_inst_clkout1 = PERIOD TIMEGRP "clock_mpll_inst_clkout1"
+        TS_pic_clk_100m_p / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X0Y48.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X2Y50.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X2Y54.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_mpll_inst_clkout2 = PERIOD TIMEGRP 
+"clock_mpll_inst_clkout2"         TS_pic_clk_100m_p / 0.0625 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.666ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock_mpll_inst_clkout2 = PERIOD TIMEGRP "clock_mpll_inst_clkout2"
+        TS_pic_clk_100m_p / 0.0625 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 157.334ns (period - min period limit)
+  Period: 160.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clock_mpll_inst/clkout3_buf/I0
+  Logical resource: clock_mpll_inst/clkout3_buf/I0
+  Location pin: BUFGMUX_X2Y4.I0
+  Clock network: clock_mpll_inst/clkout2
+--------------------------------------------------------------------------------
+Slack: 159.530ns (period - min period limit)
+  Period: 160.000ns
+  Min period limit: 0.470ns (2127.660MHz) (Tcp)
+  Physical resource: s_wdi/CLK
+  Logical resource: s_wdi/CK
+  Location pin: SLICE_X3Y28.CLK
+  Clock network: s_clk_10m
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_mpll_inst_clkout1_0 = PERIOD TIMEGRP 
+"clock_mpll_inst_clkout1_0"         TS_pic_clk_100m_n / 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5892 paths analyzed, 3811 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.263ns.
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18 (RAMB16_X3Y14.ADDRB3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     8.737ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18 (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.981ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.171ns (1.209 - 1.380)
+  Source Clock:         s_clk_50m rising at 0.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.111ns
+
+  Clock Uncertainty:          0.111ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.210ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y106.DMUX   Tshcko                0.518   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR
+    RAMB16_X3Y14.ADDRB3  net (fanout=129)     10.063   chipscope_ila_inst/U0/I_NO_D.U_ILA/iCAP_WR_ADDR<3>
+    RAMB16_X3Y14.CLKB    Trcck_ADDRB           0.400   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+    -------------------------------------------------  ---------------------------
+    Total                                     10.981ns (0.918ns logic, 10.063ns route)
+                                                       (8.4% logic, 91.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[40].u_ramb18/U_RAMB18 (RAMB16_X3Y16.ADDRB3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     8.930ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[40].u_ramb18/U_RAMB18 (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.554ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.405ns (0.975 - 1.380)
+  Source Clock:         s_clk_50m rising at 0.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.111ns
+
+  Clock Uncertainty:          0.111ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.210ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[40].u_ramb18/U_RAMB18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y106.DMUX   Tshcko                0.518   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<3>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR
+    RAMB16_X3Y16.ADDRB3  net (fanout=129)      9.636   chipscope_ila_inst/U0/I_NO_D.U_ILA/iCAP_WR_ADDR<3>
+    RAMB16_X3Y16.CLKB    Trcck_ADDRB           0.400   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[40].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[40].u_ramb18/U_RAMB18
+    -------------------------------------------------  ---------------------------
+    Total                                     10.554ns (0.918ns logic, 9.636ns route)
+                                                       (8.7% logic, 91.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18 (RAMB16_X3Y14.ADDRB5), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     9.021ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18 (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.695ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.173ns (1.209 - 1.382)
+  Source Clock:         s_clk_50m rising at 0.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.111ns
+
+  Clock Uncertainty:          0.111ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.210ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y107.BMUX   Tshcko                0.535   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/iCAP_ADDR<7>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR
+    RAMB16_X3Y14.ADDRB5  net (fanout=129)      9.760   chipscope_ila_inst/U0/I_NO_D.U_ILA/iCAP_WR_ADDR<5>
+    RAMB16_X3Y14.CLKB    Trcck_ADDRB           0.400   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[35].u_ramb18/U_RAMB18
+    -------------------------------------------------  ---------------------------
+    Total                                     10.695ns (0.935ns logic, 9.760ns route)
+                                                       (8.7% logic, 91.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock_mpll_inst_clkout1_0 = PERIOD TIMEGRP "clock_mpll_inst_clkout1_0"
+        TS_pic_clk_100m_n / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT (SLICE_X53Y115.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.194ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1 (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.196ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.072 - 0.070)
+  Source Clock:         s_clk_50m rising at 20.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1 to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y115.BQ     Tcko                  0.198   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iDIN<1>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1
+    SLICE_X53Y115.SR     net (fanout=1)        0.129   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/iDIN<1>
+    SLICE_X53Y115.CLK    Tcksr       (-Th)     0.131   chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/DSTAT_en_dly1
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT
+    -------------------------------------------------  ---------------------------
+    Total                                      0.196ns (0.067ns logic, 0.129ns route)
+                                                       (34.2% logic, 65.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1 (SLICE_X57Y108.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.222ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.380ns (Levels of Logic = 0)
+  Clock Path Skew:      0.158ns (0.849 - 0.691)
+  Source Clock:         s_clk_50m rising at 20.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y111.DQ     Tcko                  0.198   chipscope_ila_inst/U0/I_NO_D.U_ILA/iRESET<7>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST
+    SLICE_X57Y108.SR     net (fanout=1)        0.313   chipscope_ila_inst/U0/I_NO_D.U_ILA/iRESET<7>
+    SLICE_X57Y108.CLK    Tcksr       (-Th)     0.131   chipscope_ila_inst/U0/I_NO_D.U_ILA/iCAP_TRIGGER_OUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.380ns (0.067ns logic, 0.313ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1 (SLICE_X57Y108.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.232ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST (FF)
+  Destination:          chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.390ns (Levels of Logic = 0)
+  Clock Path Skew:      0.158ns (0.849 - 0.691)
+  Source Clock:         s_clk_50m rising at 20.000ns
+  Destination Clock:    s_clk_50m rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST to chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y111.DQ     Tcko                  0.198   chipscope_ila_inst/U0/I_NO_D.U_ILA/iRESET<7>
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST
+    SLICE_X57Y108.SR     net (fanout=1)        0.313   chipscope_ila_inst/U0/I_NO_D.U_ILA/iRESET<7>
+    SLICE_X57Y108.CLK    Tcksr       (-Th)     0.121   chipscope_ila_inst/U0/I_NO_D.U_ILA/iCAP_TRIGGER_OUT
+                                                       chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.390ns (0.077ns logic, 0.313ns route)
+                                                       (19.7% logic, 80.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock_mpll_inst_clkout1_0 = PERIOD TIMEGRP "clock_mpll_inst_clkout1_0"
+        TS_pic_clk_100m_n / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[70].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X0Y48.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[62].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X2Y50.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKB
+  Logical resource: chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[54].u_ramb18/U_RAMB18/CLKB
+  Location pin: RAMB16_X2Y54.CLKB
+  Clock network: s_clk_50m
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_mpll_inst_clkout2_0 = PERIOD TIMEGRP 
+"clock_mpll_inst_clkout2_0"         TS_pic_clk_100m_n / 0.0625 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.666ns.
+--------------------------------------------------------------------------------
+
+Paths for end point s_wdi (SLICE_X3Y28.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     158.066ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s_wdi (FF)
+  Destination:          s_wdi (FF)
+  Requirement:          160.000ns
+  Data Path Delay:      1.773ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_clk_10m rising at 0.000ns
+  Destination Clock:    s_clk_10m rising at 160.000ns
+  Clock Uncertainty:    0.161ns
+
+  Clock Uncertainty:          0.161ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.313ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s_wdi to s_wdi
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y28.AQ       Tcko                  0.430   s_wdi
+                                                       s_wdi
+    SLICE_X3Y28.SR       net (fanout=2)        0.933   s_wdi
+    SLICE_X3Y28.CLK      Tsrck                 0.410   s_wdi
+                                                       s_wdi
+    -------------------------------------------------  ---------------------------
+    Total                                      1.773ns (0.840ns logic, 0.933ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock_mpll_inst_clkout2_0 = PERIOD TIMEGRP "clock_mpll_inst_clkout2_0"
+        TS_pic_clk_100m_n / 0.0625 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point s_wdi (SLICE_X3Y28.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.507ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               s_wdi (FF)
+  Destination:          s_wdi (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.507ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         s_clk_10m rising at 160.000ns
+  Destination Clock:    s_clk_10m rising at 160.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: s_wdi to s_wdi
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y28.AQ       Tcko                  0.198   s_wdi
+                                                       s_wdi
+    SLICE_X3Y28.SR       net (fanout=2)        0.440   s_wdi
+    SLICE_X3Y28.CLK      Tcksr       (-Th)     0.131   s_wdi
+                                                       s_wdi
+    -------------------------------------------------  ---------------------------
+    Total                                      0.507ns (0.067ns logic, 0.440ns route)
+                                                       (13.2% logic, 86.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock_mpll_inst_clkout2_0 = PERIOD TIMEGRP "clock_mpll_inst_clkout2_0"
+        TS_pic_clk_100m_n / 0.0625 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 157.334ns (period - min period limit)
+  Period: 160.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clock_mpll_inst/clkout3_buf/I0
+  Logical resource: clock_mpll_inst/clkout3_buf/I0
+  Location pin: BUFGMUX_X2Y4.I0
+  Clock network: clock_mpll_inst/clkout2
+--------------------------------------------------------------------------------
+Slack: 159.530ns (period - min period limit)
+  Period: 160.000ns
+  Min period limit: 0.470ns (2127.660MHz) (Tcp)
+  Physical resource: s_wdi/CLK
+  Logical resource: s_wdi/CK
+  Location pin: SLICE_X3Y28.CLK
+  Clock network: s_clk_10m
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_pic_clk_100m_p
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_pic_clk_100m_p              |     10.000ns|      3.334ns|      1.785ns|            0|            0|            0|            0|
+| TS_clock_mpll_inst_clkout1    |     20.000ns|      3.570ns|          N/A|            0|            0|            0|            0|
+| TS_clock_mpll_inst_clkout2    |    160.000ns|      2.666ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_pic_clk_100m_n
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_pic_clk_100m_n              |     10.000ns|      3.334ns|      5.632ns|            0|            0|            0|         5893|
+| TS_clock_mpll_inst_clkout1_0  |     20.000ns|     11.263ns|          N/A|            0|            0|         5892|            0|
+| TS_clock_mpll_inst_clkout2_0  |    160.000ns|      2.666ns|          N/A|            0|            0|            1|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock pic_clk_100m_n
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pic_clk_100m_n |   11.263|         |         |         |
+pic_clk_100m_p |   11.263|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pic_clk_100m_p
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pic_clk_100m_n |   11.263|         |         |         |
+pic_clk_100m_p |   11.263|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 19157 paths, 0 nets, and 7919 connections
+
+Design statistics:
+   Minimum period:  17.625ns{1}   (Maximum frequency:  56.738MHz)
+   Maximum path delay from/to any node:   5.081ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Jan 15 13:49:48 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 364 MB
+
+
+

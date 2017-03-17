@@ -1,0 +1,36 @@
+  Revised: Thursday, July 05, 2012
+          Revision: 
+
+
+
+
+
+
+
+Bill Of Materials           July 5,2012      14:39:43	Page1
+
+Item	Quantity	Reference	Part	Footprint
+______________________________________________
+
+1	1	C1	1nF	0603
+2	1	C2	0.33uF	C1206
+3	3	C3,C4,C14	10uF/25V	C1206
+4	1	C5	0.1uF	C1206
+5	2	C6,C16	10uF	C1206
+6	7	C7,C8,C10,C11,C12,C13,C15	0.1uF	0603
+7	1	C9	10nF	0603
+8	1	D1	AT24C04	SO8
+9	1	D2	TMP275	SO8
+10	1	N1	OPA2277	SO8
+11	1	N2	OP2277	SO8
+12	1	N3	LMP7721	SO8
+13	11	R1,R2,R3,R4,R5,R6,R7,R8,R9,R19,R20	10k	0603
+14	1	R10	1M	0603
+15	1	R11	47k	0603
+16	1	R12	100R	0603
+17	1	R13	1k	0603
+18	1	R14	4.7k	0603
+19	3	TP2,TP5,TP8	4CF	co_4cf
+20	3	TP3,TP6,TP9	4S	so2_4s
+21	1	V1	SST117	SOT23
+22	2	X1,X2	HEADER 4	SIP4_CIR

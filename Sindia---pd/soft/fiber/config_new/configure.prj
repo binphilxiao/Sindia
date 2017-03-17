@@ -1,0 +1,8 @@
+vhdl work "../../Source/configure/src/misc.vhd"
+vhdl work "../../Source/configure/src/eeprom_control.vhd"
+vhdl work "../../Source/configure/src/core_configure/clock_mpll.vhd"
+vhdl work "../../Source/configure/src/core_configure/clock_adc.vhd"
+vhdl work "../../Source/configure/src/core_configure/chipscope_vio.vhd"
+vhdl work "../../Source/configure/src/core_configure/chipscope_ila.vhd"
+vhdl work "../../Source/configure/src/core_configure/chipscope_icon.vhd"
+vhdl work "../../Source/configure/src/configure.vhd"

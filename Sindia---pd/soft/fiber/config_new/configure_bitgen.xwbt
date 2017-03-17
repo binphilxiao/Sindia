@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\PD\fpga\pd_analog\Implementation\config_new\configure.ncd
+OUTFILE=E:\PD\fpga\pd_analog\Implementation\config_new\configure.bit
+FAMILY=Spartan6
+PART=xc6slx75-2fgg484
+WORKINGDIR=E:\PD\fpga\pd_analog\Implementation\config_new
+LICENSE=WebPack
+USER_INFO=__0_0_0

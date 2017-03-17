@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.40xd
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.40xd
+DATE            12/21/2012 - 17:40
+SOURCE          D:\project\pd\soft\configure\config.mcs
+DEVICE          8192K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x5A79AA19
+START_ADDRESS   0x00000000 END_ADDRESS 0x00256E63 DIRECTION_UP   "D:/project/pd/soft/configure/configure.bit" 6slx75fgg484

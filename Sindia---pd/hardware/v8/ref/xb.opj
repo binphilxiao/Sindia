@@ -1,0 +1,80 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\xb.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\xb.dsn")
+      (Path "Design Resources" ".\xb.dsn" "Disk_Ctrl_Block")
+      (Select "Design Resources" ".\xb.dsn" "Disk_Ctrl_Block" "06-FLASH1-4_S6"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 456 0 369"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 1293 0 623")
+        (Scroll "0 60")
+        (Zoom "100"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "05-S6_Power_Mics"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 66 1359 66 689")
+        (Scroll "0 0")
+        (Zoom "100"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "06-FLASH1-4_S6"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 264 1827 264 896")
+        (Scroll "-160 0")
+        (Zoom "124"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "01-S6_V6_LVDS_IO"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 286 1849 286 918")
+        (Scroll "0 0")
+        (Zoom "100"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "02-S6_DDR3"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 308 1871 308 940")
+        (Scroll "-2 0")
+        (Zoom "100"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "04-S6_Flash"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 1563 0 632")
+        (Scroll "180 0")
+        (Zoom "100"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\REF\XB.DSN")
+      (Schematic "Disk_Ctrl_Block")
+      (Page "07-FLASH5-8_S6")))
+  (MPSSessionName "xiaobin"))

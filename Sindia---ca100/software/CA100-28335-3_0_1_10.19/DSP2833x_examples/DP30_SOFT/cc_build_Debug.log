@@ -1,0 +1,22 @@
+----------------------------  dpa1000.pjt - Debug  ----------------------------
+[purity.c] "C:\Program Files\C2000 Code Generation Tools 5.0.0\bin\cl2000" -g -q -pdr -fr"D:/project/ca100/software/CA100-28335-3_0_1/DSP2833x_examples/DP30_SOFT/Debug" -fs"D:/project/ca100/software/CA100-28335-3_0_1/DSP2833x_examples/DP30_SOFT/Debug" -i"../../DSP2833x_headers/include" -i"../../DSP2833x_common/include" -d"_DEBUG" -d"LARGE_MODEL" -ml -mt -v28 --float_support=fpu32 -@"../DP30_SOFT/Debug.lkf" "purity.c"
+"purity.c", line 155: warning: variable "receive_buffer" is used before its value is set
+
+[Example_2833xScia_FFDLB.c] "C:\Program Files\C2000 Code Generation Tools 5.0.0\bin\cl2000" -g -q -pdr -fr"D:/project/ca100/software/CA100-28335-3_0_1/DSP2833x_examples/DP30_SOFT/Debug" -fs"D:/project/ca100/software/CA100-28335-3_0_1/DSP2833x_examples/DP30_SOFT/Debug" -i"../../DSP2833x_headers/include" -i"../../DSP2833x_common/include" -d"_DEBUG" -d"LARGE_MODEL" -ml -mt -v28 --float_support=fpu32 -@"Debug.lkf" "Example_2833xScia_FFDLB.c"
+"Example_2833xScia_FFDLB.c", line 256: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 320: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 324: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 326: remark: controlling expression is constant
+"Example_2833xScia_FFDLB.c", line 351: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 334: warning: variable "ret" was set but never used
+"Example_2833xScia_FFDLB.c", line 437: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 438: remark: controlling expression is constant
+"Example_2833xScia_FFDLB.c", line 453: remark: function declared implicitly
+"Example_2833xScia_FFDLB.c", line 459: remark: controlling expression is constant
+
+[Linking...] "C:\Program Files\C2000 Code Generation Tools 5.0.0\bin\cl2000" -@"Debug.lkf"
+<Linking>
+>> warning: entry point other than _c_int00 specified
+
+Build Complete,
+  0 Errors, 3 Warnings, 9 Remarks.

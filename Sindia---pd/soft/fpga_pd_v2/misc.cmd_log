@@ -1,0 +1,2 @@
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/misc.vhi -module misc -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/misc.vhd 
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/misc.vhi -module misc -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/misc.vhd 

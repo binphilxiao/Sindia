@@ -1,0 +1,2 @@
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/eeprom_control.vhi -module eeprom_control -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/eeprom_control.vhd 
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/eeprom_control.vhi -module eeprom_control -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/src/eeprom_control.vhd 

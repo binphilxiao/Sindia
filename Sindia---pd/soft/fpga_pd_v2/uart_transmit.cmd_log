@@ -1,0 +1,2 @@
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/uart_transmit.vhi -module uart_transmit -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/uart_transmit.vhd 
+vhdtdtfi -prj configure -o E:/PD/fpga/pd/Implementation/configure/uart_transmit.vhi -module uart_transmit -template d:/Xilinx/13.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../../Source/configure/uart_transmit.vhd 

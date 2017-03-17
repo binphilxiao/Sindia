@@ -1,0 +1,8 @@
+work	"../../Source/configure/src/configure.vhd"
+work	"../../Source/configure/src/core_configure/chipscope_icon.vhd"
+work	"../../Source/configure/src/core_configure/chipscope_ila.vhd"
+work	"../../Source/configure/src/core_configure/chipscope_vio.vhd"
+work	"../../Source/configure/src/core_configure/clock_adc.vhd"
+work	"../../Source/configure/src/core_configure/clock_mpll.vhd"
+work	"../../Source/configure/src/eeprom_control.vhd"
+work	"../../Source/configure/src/misc.vhd"

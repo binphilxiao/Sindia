@@ -1,0 +1,143 @@
+(ExpressProject "UHF"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "D:\project\雷航世纪\p4080+raid\hardware\v1\LIBRARY1.OLB"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\uhf.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\uhf.dsn")
+      (Path "Design Resources" ".\uhf.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Select "Design Resources" ".\uhf.dsn" "SCHEMATIC1" "1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 445 1224 59 762"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 1381 0 422")
+        (Scroll "-69 43")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "ETH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 154 1717 154 786")
+        (Scroll "-160 0")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FPGA-POWER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 176 1739 176 808")
+        (Scroll "-160 0")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "POWER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 132 1695 132 764")
+        (Scroll "-160 68")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 154 1717 154 786")
+        (Scroll "-160 68")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FPGA-M1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 132 1695 132 764")
+        (Scroll "-160 0")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FIBER_M"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 154 1717 154 786")
+        (Scroll "-318 -8")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "D:\PROJECT\PD\HARDWARE\V8\UHF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "1")))
+  (PartMRUSelector
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (7400
+      (FullPartName "7400.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\GATE.OLB")
+      (DeviceIndex "0"))
+    ("CONN PLUG 4x2"
+      (FullPartName "CONN PLUG 4x2.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("CONN MOD 6-8_J"
+      (FullPartName "CONN MOD 6-8_J.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (MAX9686
+      (FullPartName "MAX9686.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (MAX988/SO
+      (FullPartName "MAX988/SO.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (MAX996/SO
+      (FullPartName "MAX996/SO.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (6slx75tfgg484
+      (FullPartName "6slx75tfgg484-9.Normal")
+      (LibraryName "D:\PROJECT\雷航世纪\P4080+RAID\HARDWARE\V1\LIBRARY1.OLB")
+      (DeviceIndex "8"))
+    ("8 HEADER"
+      (FullPartName "8 HEADER.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (SIP8/SIP
+      (FullPartName "SIP8/SIP.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\MISC3.OLB")
+      (DeviceIndex "0"))
+    (6slx75tfgg676
+      (FullPartName "6slx75tfgg676-5.Normal")
+      (LibraryName "D:\PROJECT\雷航世纪\P4080+RAID\HARDWARE\V1\LIBRARY1.OLB")
+      (DeviceIndex "4")))
+  (MPSSessionName "xiaobin"))

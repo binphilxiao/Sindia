@@ -1,0 +1,70 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectName="DSP2833x"
+ProjectDir="F:\DPA1000_SOFT\DSP2833x_examples\DP30_SOFT\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\DSP2833x_common\source\DSP2833x_ADC_cal.asm"
+Source="..\..\DSP2833x_common\source\DSP2833x_CodeStartBranch.asm"
+Source="..\..\DSP2833x_common\source\DSP2833x_CpuTimers.c"
+Source="..\..\DSP2833x_common\source\DSP2833x_DefaultIsr.c"
+Source="..\..\DSP2833x_common\source\DSP2833x_PieCtrl.c"
+Source="..\..\DSP2833x_common\source\DSP2833x_PieVect.c"
+Source="..\..\DSP2833x_common\source\DSP2833x_SysCtrl.c"
+Source="..\..\DSP2833x_common\source\DSP2833x_usDelay.asm"
+Source="..\..\DSP2833x_common\source\DSP2833x_Xintf.c"
+Source="..\..\DSP2833x_headers\source\DSP2833x_GlobalVariableDefs.c"
+Source="..\dp30\ads8401.c"
+Source="..\dp30\bcd_hex.c"
+Source="..\dp30\calib.c"
+Source="..\dp30\control.c"
+Source="..\dp30\dac7632.c"
+Source="..\dp30\display_touch.c"
+Source="..\dp30\fm22l16.c"
+Source="..\dp30\fm24cl04.c"
+Source="..\dp30\key.c"
+Source="..\dp30\menu.c"
+Source="..\dp30\ppm.c"
+Source="..\dp30\record.c"
+Source="..\dp30\rx_8025.c"
+Source="..\dp30\set.c"
+Source="..\dp30\sht11.c"
+Source="..\dp30\u_key.c"
+Source="..\dp30\usb.c"
+Source="Example_2833xScia_FFDLB.c"
+Source="..\..\DSP2833x_common\cmd\F28335.cmd"
+Source="..\..\DSP2833x_headers\cmd\DSP2833x_Headers_nonBIOS.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -pdr -fr"F:\DPA1000_SOFT\DSP2833x_examples\DP30_SOFT\Debug" -fs"F:\DPA1000_SOFT\DSP2833x_examples\DP30_SOFT\Debug" -i"..\..\DSP2833x_headers\include" -i"..\..\DSP2833x_common\include" -d"_DEBUG" -d"LARGE_MODEL" -ml -mt -v28 --float_support=fpu32
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"F:\DPA1000_SOFT\DSP2833x_examples\DP30_SOFT\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v28
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -ecode_start -m".\Debug\Example_2833xCpuTimer.map" -o".\Debug\Example_2833xCpuTimer.out" -stack0x200 -w -x -i"..\..\DSP2833x_headers\include" -l"rts2800_fpu32.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -o".\Release\Example_2833xCpuTimer.out" -x
+
+["..\..\DSP2833x_common\cmd\F28335.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\..\DSP2833x_common\cmd\F28335.cmd" Settings: "Release"]
+LinkOrder=1
+

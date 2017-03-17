@@ -1,0 +1,1018 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: configure.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "configure.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "configure"
+Output Format                      : NGC
+Target Device                      : xc6slx75-2-fgg484
+
+---- Source Options
+Top Module Name                    : configure
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\misc.vhd" into library work
+Parsing entity <misc>.
+Parsing architecture <Behavioral> of entity <misc>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\eeprom_control.vhd" into library work
+Parsing entity <eeprom_control>.
+Parsing architecture <Behavioral> of entity <eeprom_control>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\clock_mpll.vhd" into library work
+Parsing entity <clock_mpll>.
+Parsing architecture <xilinx> of entity <clock_mpll>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\clock_adc.vhd" into library work
+Parsing entity <clock_adc>.
+Parsing architecture <xilinx> of entity <clock_adc>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\chipscope_vio.vhd" into library work
+Parsing entity <chipscope_vio>.
+Parsing architecture <chipscope_vio_a> of entity <chipscope_vio>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\chipscope_ila.vhd" into library work
+Parsing entity <chipscope_ila>.
+Parsing architecture <chipscope_ila_a> of entity <chipscope_ila>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\chipscope_icon.vhd" into library work
+Parsing entity <chipscope_icon>.
+Parsing architecture <chipscope_icon_a> of entity <chipscope_icon>.
+Parsing VHDL file "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" into library work
+Parsing entity <configure>.
+INFO:HDLCompiler:1676 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" Line 43. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <configure>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <configure> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <clock_mpll> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <clock_adc> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <chipscope_icon> (architecture <chipscope_icon_a>) from library <work>.
+
+Elaborating entity <chipscope_ila> (architecture <chipscope_ila_a>) from library <work>.
+
+Elaborating entity <chipscope_vio> (architecture <chipscope_vio_a>) from library <work>.
+
+Elaborating entity <eeprom_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <misc> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" Line 254: Net <s_chipscope_ila_trig0[127]> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" Line 255: Net <s_chipscope_ila_trig1[127]> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" Line 256: Net <s_chipscope_ila_trig2[127]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <configure>.
+    Related source file is "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd".
+        sim = 0
+WARNING:Xst:647 - Input <pid_adc_data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <tid_channel_id> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pid_sadc_dout> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pid_tdi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <tic_channel_id_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <tic_channel_id_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 294: Output port <CLK_OUT1> of the instance <clock_mpll_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 294: Output port <CLK_OUT3> of the instance <clock_mpll_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 294: Output port <CLK_OUT4> of the instance <clock_mpll_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 294: Output port <LOCKED> of the instance <clock_mpll_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 311: Output port <CLK_OUT1> of the instance <clock_adc_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 311: Output port <CLK_OUT2> of the instance <clock_adc_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\PD\fpga\pd_analog\Source\configure\src\configure.vhd" line 311: Output port <LOCKED> of the instance <clock_adc_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <s_chipscope_ila_trig0<127:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <s_chipscope_ila_trig1<127:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <s_chipscope_ila_trig2<127:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<127>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<126>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<125>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<124>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<123>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<122>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<121>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<120>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<119>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<118>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<117>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<116>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<115>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<114>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<113>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<112>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<111>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<110>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<109>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<108>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<107>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<106>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<105>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<104>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<103>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<102>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<101>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<100>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<99>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<98>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<97>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<96>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<95>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<94>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<93>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<92>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<91>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<90>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<89>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<88>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<87>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<86>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<85>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<84>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<83>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<82>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<81>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<80>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<79>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<78>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<77>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<76>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<75>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<74>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<73>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<72>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<71>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<70>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<69>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<68>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<67>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<66>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<65>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<64>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<63>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<62>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_chipscope_ila_trig<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred 128 Latch(s).
+	inferred 384 Multiplexer(s).
+Unit <configure> synthesized.
+
+Synthesizing Unit <clock_mpll>.
+    Related source file is "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\clock_mpll.vhd".
+    Summary:
+	no macro.
+Unit <clock_mpll> synthesized.
+
+Synthesizing Unit <clock_adc>.
+    Related source file is "E:\PD\fpga\pd_analog\Source\configure\src\core_configure\clock_adc.vhd".
+    Summary:
+	no macro.
+Unit <clock_adc> synthesized.
+
+Synthesizing Unit <eeprom_control>.
+    Related source file is "E:\PD\fpga\pd_analog\Source\configure\src\eeprom_control.vhd".
+WARNING:Xst:653 - Signal <pod_eeprom_rdata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <chipscope_ila_trig<255:25>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <poc_eeprom_rready> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 16-bit register for signal <s_eeprom_tdata>.
+    Found 16-bit register for signal <s_eeprom_rdata>.
+    Found 3-bit register for signal <s_eeprom_tbyte_cnt>.
+    Found 3-bit register for signal <s_eeprom_rbyte_cnt>.
+    Found 3-bit register for signal <s_current_state>.
+    Found 8-bit register for signal <s_clk_500k_cnt>.
+    Found 8-bit register for signal <s_eeprom_sda_wbyte>.
+    Found 8-bit register for signal <s_eeprom_sda_rbyte>.
+    Found 6-bit register for signal <s_eeprom_wcnt_st1>.
+    Found 6-bit register for signal <s_eeprom_wcnt_st2>.
+    Found 6-bit register for signal <s_eeprom_wcnt_st3>.
+    Found 6-bit register for signal <s_eeprom_wcnt_st4>.
+    Found 6-bit register for signal <s_eeprom_rcnt_st1>.
+    Found 6-bit register for signal <s_eeprom_rcnt_st2>.
+    Found 6-bit register for signal <s_eeprom_rcnt_st3>.
+    Found 6-bit register for signal <s_eeprom_rcnt_st4>.
+    Found 1-bit register for signal <s_eeprom_write>.
+    Found 1-bit register for signal <s_eeprom_read>.
+    Found 1-bit register for signal <s_eeprom_tfinish>.
+    Found 1-bit register for signal <s_clk_500k>.
+    Found 1-bit register for signal <s_eeprom_rready>.
+    Found 1-bit register for signal <s_eeprom_scl_d1>.
+    Found 1-bit register for signal <s_eeprom_sda>.
+    Found 1-bit register for signal <s_eeprom_sda_dir>.
+    Found 1-bit register for signal <s_eeprom_wp>.
+    Found 1-bit register for signal <s_eeprom_scl>.
+    Found finite state machine <FSM_0> for signal <s_current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 40                                             |
+    | Inputs             | 19                                             |
+    | Outputs            | 9                                              |
+    | Clock              | pic_clk_100m (rising_edge)                     |
+    | Reset              | pic_rst (positive)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <s_eeprom_tbyte_cnt[2]_GND_271_o_add_57_OUT> created at line 235.
+    Found 8-bit adder for signal <s_clk_500k_cnt[7]_GND_271_o_add_62_OUT> created at line 250.
+    Found 6-bit adder for signal <s_eeprom_wcnt_st1[5]_GND_271_o_add_68_OUT> created at line 272.
+    Found 6-bit adder for signal <s_eeprom_wcnt_st2[5]_GND_271_o_add_73_OUT> created at line 278.
+    Found 6-bit adder for signal <s_eeprom_wcnt_st3[5]_GND_271_o_add_79_OUT> created at line 284.
+    Found 6-bit adder for signal <s_eeprom_wcnt_st4[5]_GND_271_o_add_87_OUT> created at line 291.
+    Found 6-bit adder for signal <s_eeprom_rcnt_st1[5]_GND_271_o_add_107_OUT> created at line 330.
+    Found 6-bit adder for signal <s_eeprom_rcnt_st2[5]_GND_271_o_add_112_OUT> created at line 336.
+    Found 6-bit adder for signal <s_eeprom_rcnt_st3[5]_GND_271_o_add_118_OUT> created at line 342.
+    Found 6-bit adder for signal <s_eeprom_rcnt_st4[5]_GND_271_o_add_126_OUT> created at line 349.
+    Found 3-bit adder for signal <s_eeprom_rbyte_cnt[2]_GND_271_o_add_137_OUT> created at line 363.
+    Found 1-bit 8-to-1 multiplexer for signal <s_eeprom_wcnt_st2[4]_s_eeprom_sda_wbyte[7]_Mux_171_o> created at line 443.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0565> created at line 304.
+    Found 1-bit tristate buffer for signal <pid_eeprom_sda> created at line 512
+    Found 3-bit comparator greater for signal <s_eeprom_tbyte_cnt[2]_GND_271_o_LessThan_20_o> created at line 143
+    Found 3-bit comparator greater for signal <s_eeprom_rbyte_cnt[2]_PWR_13_o_LessThan_29_o> created at line 152
+    Found 3-bit comparator greater for signal <GND_271_o_s_eeprom_rbyte_cnt[2]_LessThan_143_o> created at line 375
+    Summary:
+	inferred  11 Adder/Subtractor(s).
+	inferred 120 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  44 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <eeprom_control> synthesized.
+
+Synthesizing Unit <misc>.
+    Related source file is "E:\PD\fpga\pd_analog\Source\configure\src\misc.vhd".
+WARNING:Xst:647 - Input <pid_eeprom_rdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pic_eeprom_rready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pic_eeprom_tfinish> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <chipscope_ila_trig> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 3-bit register for signal <s_current_state>.
+    Found 3-bit register for signal <s_current_state_d1>.
+    Found 16-bit register for signal <s_eeprom_tdata>.
+    Found 1-bit register for signal <s_channel_id_write_rising>.
+    Found 1-bit register for signal <s_channel_id_read>.
+    Found 1-bit register for signal <s_channel_id_read_rising>.
+    Found 1-bit register for signal <s_eeprom_tstart>.
+    Found 1-bit register for signal <s_eeprom_rstart>.
+    Found 1-bit register for signal <s_channel_id_write>.
+    Found finite state machine <FSM_1> for signal <s_current_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | pic_clk_100m (rising_edge)                     |
+    | Reset              | pic_rst (positive)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <misc> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 11
+ 3-bit adder                                           : 2
+ 6-bit adder                                           : 8
+ 8-bit adder                                           : 1
+# Registers                                            : 33
+ 1-bit register                                        : 16
+ 16-bit register                                       : 3
+ 3-bit register                                        : 3
+ 6-bit register                                        : 8
+ 8-bit register                                        : 3
+# Latches                                              : 128
+ 1-bit latch                                           : 128
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 3
+# Multiplexers                                         : 429
+ 1-bit 2-to-1 multiplexer                              : 414
+ 1-bit 8-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <s_current_state_d1_2> (without init value) has a constant value of 0 in block <misc_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_1> of sequential type is unconnected in block <eeprom_control_inst>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_3> of sequential type is unconnected in block <eeprom_control_inst>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_4> of sequential type is unconnected in block <eeprom_control_inst>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_5> of sequential type is unconnected in block <eeprom_control_inst>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_6> of sequential type is unconnected in block <eeprom_control_inst>.
+WARNING:Xst:2404 -  FFs/Latches <s_current_state_d1<2:2>> (without init value) have a constant value of 0 in block <misc>.
+
+Synthesizing (advanced) Unit <eeprom_control>.
+The following registers are absorbed into counter <s_clk_500k_cnt>: 1 register on signal <s_clk_500k_cnt>.
+The following registers are absorbed into counter <s_eeprom_tbyte_cnt>: 1 register on signal <s_eeprom_tbyte_cnt>.
+The following registers are absorbed into counter <s_eeprom_rbyte_cnt>: 1 register on signal <s_eeprom_rbyte_cnt>.
+The following registers are absorbed into counter <s_eeprom_wcnt_st1>: 1 register on signal <s_eeprom_wcnt_st1>.
+The following registers are absorbed into counter <s_eeprom_wcnt_st2>: 1 register on signal <s_eeprom_wcnt_st2>.
+The following registers are absorbed into counter <s_eeprom_wcnt_st3>: 1 register on signal <s_eeprom_wcnt_st3>.
+The following registers are absorbed into counter <s_eeprom_wcnt_st4>: 1 register on signal <s_eeprom_wcnt_st4>.
+The following registers are absorbed into counter <s_eeprom_rcnt_st2>: 1 register on signal <s_eeprom_rcnt_st2>.
+The following registers are absorbed into counter <s_eeprom_rcnt_st1>: 1 register on signal <s_eeprom_rcnt_st1>.
+The following registers are absorbed into counter <s_eeprom_rcnt_st3>: 1 register on signal <s_eeprom_rcnt_st3>.
+The following registers are absorbed into counter <s_eeprom_rcnt_st4>: 1 register on signal <s_eeprom_rcnt_st4>.
+Unit <eeprom_control> synthesized (advanced).
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_1> of sequential type is unconnected in block <eeprom_control>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_3> of sequential type is unconnected in block <eeprom_control>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_4> of sequential type is unconnected in block <eeprom_control>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_5> of sequential type is unconnected in block <eeprom_control>.
+WARNING:Xst:2677 - Node <s_eeprom_sda_rbyte_6> of sequential type is unconnected in block <eeprom_control>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 11
+ 3-bit up counter                                      : 2
+ 6-bit up counter                                      : 8
+ 8-bit up counter                                      : 1
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+# Comparators                                          : 3
+ 3-bit comparator greater                              : 3
+# Multiplexers                                         : 418
+ 1-bit 2-to-1 multiplexer                              : 414
+ 1-bit 8-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <eeprom_control_inst/FSM_0> on signal <s_current_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+INFO:Xst:2146 - In block <eeprom_control>, Counter <s_eeprom_wcnt_st4> <s_eeprom_rcnt_st4> are equivalent, XST will keep only <s_eeprom_wcnt_st4>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <misc_inst/FSM_1> on signal <s_current_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 010   | 01
+ 001   | 10
+-------------------
+INFO:Xst:1901 - Instance clock_mpll_inst/pll_base_inst in unit clock_mpll_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance clock_adc_inst/pll_base_inst in unit clock_adc_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <s_eeprom_sda_rbyte_0> in Unit <eeprom_control> is equivalent to the following FF/Latch, which will be removed : <s_eeprom_sda_rbyte_2> 
+INFO:Xst:2261 - The FF/Latch <s_eeprom_rstart> in Unit <misc> is equivalent to the following FF/Latch, which will be removed : <s_current_state_d1_1> 
+
+Optimizing unit <configure> ...
+
+Optimizing unit <misc> ...
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_51> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_52> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_53> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_54> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_55> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_56> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_57> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_58> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_59> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_60> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_61> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_62> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_63> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_64> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_65> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_66> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_67> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_68> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_69> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_70> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_71> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_72> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_73> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_74> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_75> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_25> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_26> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_27> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_28> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_29> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_30> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_31> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_32> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_33> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_34> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_35> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_36> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_37> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_38> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_39> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_40> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_41> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_42> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_43> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_44> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_45> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_46> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_47> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_48> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_49> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_50> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_102> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_103> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_104> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_105> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_106> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_107> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_108> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_109> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_110> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_111> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_112> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_113> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_114> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_115> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_116> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_117> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_118> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_119> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_120> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_121> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_122> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_123> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_124> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_125> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_127> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_126> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_76> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_77> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_78> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_79> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_80> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_81> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_82> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_83> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_84> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_85> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_86> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_87> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_88> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_89> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_90> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_91> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_92> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_93> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_94> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_95> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_96> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_97> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_98> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_99> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_100> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_chipscope_ila_trig_101> (without init value) has a constant value of 0 in block <configure>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <eeprom_control_inst/s_eeprom_tfinish> of sequential type is unconnected in block <configure>.
+INFO:Xst:2261 - The FF/Latch <misc_inst/s_eeprom_tstart> in Unit <configure> is equivalent to the following FF/Latch, which will be removed : <misc_inst/s_current_state_d1_0> 
+
+Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <pod_adc_gain_control<2>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <pod_adc_gain_control<1>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <pod_adc_gain_control<0>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <poc_relay_1<1>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <poc_relay_1<0>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <poc_relay_2<1>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <poc_relay_2<0>> driven by black box <chipscope_vio>. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block configure, actual ratio is 0.
+FlipFlop eeprom_control_inst/s_clk_500k has been replicated 1 time(s)
+FlipFlop eeprom_control_inst/s_current_state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop eeprom_control_inst/s_current_state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop eeprom_control_inst/s_current_state_FSM_FFd3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : configure.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 216
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 5
+#      LUT2                        : 21
+#      LUT3                        : 18
+#      LUT4                        : 72
+#      LUT5                        : 19
+#      LUT6                        : 61
+#      MUXCY                       : 7
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 163
+#      FDC                         : 49
+#      FDCE                        : 84
+#      FDP                         : 4
+#      FDPE                        : 1
+#      LD                          : 25
+# Clock Buffers                    : 10
+#      BUFG                        : 10
+# IO Buffers                       : 14
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      IBUFGDS                     : 1
+#      IOBUF                       : 1
+#      OBUF                        : 10
+# Others                           : 5
+#      chipscope_icon              : 1
+#      chipscope_ila               : 1
+#      chipscope_vio               : 1
+#      PLL_ADV                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx75fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             163  out of  93296     0%  
+ Number of Slice LUTs:                  198  out of  46648     0%  
+    Number used as Logic:               198  out of  46648     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    226
+   Number with an unused Flip Flop:      63  out of    226    27%  
+   Number with an unused LUT:            28  out of    226    12%  
+   Number of fully used LUT-FF pairs:   135  out of    226    59%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          56
+ Number of bonded IOBs:                  15  out of    280     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:               10  out of     16    62%  
+ Number of PLL_ADVs:                      2  out of      6    33%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------+---------------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)           | Load  |
+-----------------------------------------------------+---------------------------------+-------+
+GND_5_o_GND_5_o_OR_519_o(GND_5_o_GND_5_o_OR_519_o1:O)| BUFG(*)(s_chipscope_ila_trig_24)| 25    |
+eeprom_control_inst/s_clk_500k                       | BUFG                            | 42    |
+clock_mpll_inst/pll_base_inst/CLKOUT1                | BUFG                            | 96    |
+-----------------------------------------------------+---------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.218ns (Maximum Frequency: 237.093MHz)
+   Minimum input arrival time before clock: 5.048ns
+   Maximum output required time after clock: 5.098ns
+   Maximum combinational path delay: 3.593ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'eeprom_control_inst/s_clk_500k'
+  Clock period: 2.901ns (frequency: 344.709MHz)
+  Total number of paths / destination ports: 147 / 42
+-------------------------------------------------------------------------
+Delay:               2.901ns (Levels of Logic = 2)
+  Source:            eeprom_control_inst/s_eeprom_wcnt_st1_1 (FF)
+  Destination:       eeprom_control_inst/s_eeprom_wcnt_st1_5 (FF)
+  Source Clock:      eeprom_control_inst/s_clk_500k rising
+  Destination Clock: eeprom_control_inst/s_clk_500k rising
+
+  Data Path: eeprom_control_inst/s_eeprom_wcnt_st1_1 to eeprom_control_inst/s_eeprom_wcnt_st1_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.525   1.116  eeprom_control_inst/s_eeprom_wcnt_st1_1 (eeprom_control_inst/s_eeprom_wcnt_st1_1)
+     LUT2:I0->O            1   0.250   0.682  eeprom_control_inst/Mcount_s_eeprom_wcnt_st1_xor<5>1_SW0 (N16)
+     LUT6:I5->O            1   0.254   0.000  eeprom_control_inst/Mcount_s_eeprom_wcnt_st1_xor<5>1 (eeprom_control_inst/Mcount_s_eeprom_wcnt_st15)
+     FDCE:D                    0.074          eeprom_control_inst/s_eeprom_wcnt_st1_5
+    ----------------------------------------
+    Total                      2.901ns (1.103ns logic, 1.798ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_mpll_inst/pll_base_inst/CLKOUT1'
+  Clock period: 4.218ns (frequency: 237.093MHz)
+  Total number of paths / destination ports: 836 / 136
+-------------------------------------------------------------------------
+Delay:               4.218ns (Levels of Logic = 10)
+  Source:            eeprom_control_inst/s_clk_500k_cnt_7 (FF)
+  Destination:       eeprom_control_inst/s_clk_500k_cnt_7 (FF)
+  Source Clock:      clock_mpll_inst/pll_base_inst/CLKOUT1 rising
+  Destination Clock: clock_mpll_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: eeprom_control_inst/s_clk_500k_cnt_7 to eeprom_control_inst/s_clk_500k_cnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.525   1.104  eeprom_control_inst/s_clk_500k_cnt_7 (eeprom_control_inst/s_clk_500k_cnt_7)
+     LUT3:I0->O            9   0.235   0.976  eeprom_control_inst/GND_271_o_GND_271_o_equal_53_o<7>_SW0 (N2)
+     LUT6:I5->O            1   0.254   0.681  eeprom_control_inst/GND_271_o_GND_271_o_equal_53_o_inv1 (eeprom_control_inst/GND_271_o_GND_271_o_equal_53_o_inv)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<0> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<1> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<2> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<3> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<4> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<5> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<6> (eeprom_control_inst/Mcount_s_clk_500k_cnt_cy<6>)
+     XORCY:CI->O           1   0.206   0.000  eeprom_control_inst/Mcount_s_clk_500k_cnt_xor<7> (eeprom_control_inst/Mcount_s_clk_500k_cnt7)
+     FDC:D                     0.074          eeprom_control_inst/s_clk_500k_cnt_7
+    ----------------------------------------
+    Total                      4.218ns (1.457ns logic, 2.761ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GND_5_o_GND_5_o_OR_519_o'
+  Total number of paths / destination ports: 76 / 25
+-------------------------------------------------------------------------
+Offset:              2.620ns (Levels of Logic = 2)
+  Source:            pid_eeprom_sda (PAD)
+  Destination:       s_chipscope_ila_trig_4 (LATCH)
+  Destination Clock: GND_5_o_GND_5_o_OR_519_o falling
+
+  Data Path: pid_eeprom_sda to s_chipscope_ila_trig_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.328   1.002  pid_eeprom_sda_IOBUF (N20)
+     LUT4:I0->O            1   0.254   0.000  Mmux_s_chipscope_ila_trig[255]_s_chipscope_ila_trig0[4]_MUX_1516_o11 (s_chipscope_ila_trig[255]_s_chipscope_ila_trig0[4]_MUX_1516_o)
+     LD:D                      0.036          s_chipscope_ila_trig_4
+    ----------------------------------------
+    Total                      2.620ns (1.618ns logic, 1.002ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'eeprom_control_inst/s_clk_500k'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              5.048ns (Levels of Logic = 2)
+  Source:            pic_rst (PAD)
+  Destination:       eeprom_control_inst/s_eeprom_wcnt_st4_5 (FF)
+  Destination Clock: eeprom_control_inst/s_clk_500k rising
+
+  Data Path: pic_rst to eeprom_control_inst/s_eeprom_wcnt_st4_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  pic_rst_IBUF (pic_rst_IBUF)
+     INV:I->O            138   0.255   2.325  s_rst1_INV_0 (s_rst)
+     FDCE:CLR                  0.459          eeprom_control_inst/s_eeprom_wcnt_st3_0
+    ----------------------------------------
+    Total                      5.048ns (2.042ns logic, 3.006ns route)
+                                       (40.5% logic, 59.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_mpll_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 117 / 117
+-------------------------------------------------------------------------
+Offset:              5.048ns (Levels of Logic = 2)
+  Source:            pic_rst (PAD)
+  Destination:       eeprom_control_inst/s_current_state_FSM_FFd1 (FF)
+  Destination Clock: clock_mpll_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: pic_rst to eeprom_control_inst/s_current_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  pic_rst_IBUF (pic_rst_IBUF)
+     INV:I->O            138   0.255   2.325  s_rst1_INV_0 (s_rst)
+     FDCE:CLR                  0.459          eeprom_control_inst/s_eeprom_tdata_0
+    ----------------------------------------
+    Total                      5.048ns (2.042ns logic, 3.006ns route)
+                                       (40.5% logic, 59.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_mpll_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              5.098ns (Levels of Logic = 2)
+  Source:            eeprom_control_inst/s_eeprom_sda_dir (FF)
+  Destination:       pid_eeprom_sda (PAD)
+  Source Clock:      clock_mpll_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: eeprom_control_inst/s_eeprom_sda_dir to pid_eeprom_sda
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.525   0.725  eeprom_control_inst/s_eeprom_sda_dir (eeprom_control_inst/s_eeprom_sda_dir)
+     INV:I->O              1   0.255   0.681  eeprom_control_inst/s_eeprom_sda_dir_inv1_INV_0 (eeprom_control_inst/s_eeprom_sda_dir_inv)
+     IOBUF:T->IO               2.912          pid_eeprom_sda_IOBUF (pid_eeprom_sda)
+    ----------------------------------------
+    Total                      5.098ns (3.692ns logic, 1.406ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GND_5_o_GND_5_o_OR_519_o'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              0.581ns (Levels of Logic = 0)
+  Source:            s_chipscope_ila_trig_24 (LATCH)
+  Destination:       chipscope_ila_inst:TRIG0<24> (PAD)
+  Source Clock:      GND_5_o_GND_5_o_OR_519_o falling
+
+  Data Path: s_chipscope_ila_trig_24 to chipscope_ila_inst:TRIG0<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               0   0.581   0.000  s_chipscope_ila_trig_24 (s_chipscope_ila_trig_24)
+    chipscope_ila:TRIG0<24>        0.000          chipscope_ila_inst
+    ----------------------------------------
+    Total                      0.581ns (0.581ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 79 / 79
+-------------------------------------------------------------------------
+Delay:               3.593ns (Levels of Logic = 1)
+  Source:            chipscope_vio_inst:SYNC_OUT<23> (PAD)
+  Destination:       pod_adc_gain_control<2> (PAD)
+
+  Data Path: chipscope_vio_inst:SYNC_OUT<23> to pod_adc_gain_control<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    chipscope_vio:SYNC_OUT<23>    1   0.000   0.681  chipscope_vio_inst (pod_adc_gain_control_2_OBUF)
+     OBUF:I->O                 2.912          pod_adc_gain_control_2_OBUF (pod_adc_gain_control<2>)
+    ----------------------------------------
+    Total                      3.593ns (2.912ns logic, 0.681ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock GND_5_o_GND_5_o_OR_519_o
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+clock_mpll_inst/pll_base_inst/CLKOUT1|         |         |    2.130|         |
+-------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_mpll_inst/pll_base_inst/CLKOUT1
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+clock_mpll_inst/pll_base_inst/CLKOUT1|    4.218|         |         |         |
+eeprom_control_inst/s_clk_500k       |    5.930|         |         |         |
+-------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock eeprom_control_inst/s_clk_500k
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+clock_mpll_inst/pll_base_inst/CLKOUT1|    4.418|         |         |         |
+eeprom_control_inst/s_clk_500k       |    2.901|         |         |         |
+-------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.64 secs
+ 
+--> 
+
+Total memory usage is 275248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  270 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
